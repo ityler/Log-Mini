@@ -15,9 +15,8 @@ package Log::Mini;
 #     2 => error
 #     1 => fatal
 #
-# Ability to trigger all msgs with certain level to go to another file or to stdout
-# Ability to define a config file to use rather than create anonymous hash of 
-# attributes for each log instance
+# Trigger all msgs with certain level to go to another file or to stdout
+# Define a config file to use rather than create anonymous hash of attributes for each log instance
 # -----------------------------------------------------
 # Use log4perl->easy_init method of defining layout '%F{1}-%L-%M: %m%n'
 #
@@ -205,7 +204,8 @@ sub get_log_filename {
 # Get logger instance configuration values
 # -
 sub get_log_config {
-
+  my $self = shift;
+  # Return hash of config values using $self
 }
 
 1;
